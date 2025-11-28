@@ -106,7 +106,7 @@ public class Telemedicine {
         // Doctor enters 80kg, but accidentally sets unit to kg, 
         System.out.println("Scenario 2: Protection System Activation ");
         try {
-            double weight = 100; // 100 kg child?
+            double weight = 100; 
             String unit = "kg";
             
             double dose = calculator.calculateSafeDosage(weight, unit);
@@ -120,7 +120,6 @@ public class Telemedicine {
             System.out.println("System prevented fatal error.\n");
         }
 
-        // Fast network 
         System.out.println("Scenario 3: Fast Network Allergy Check ");
         String result = allergyService.checkAllergiesWithTimeout("Patient_123", 50);
         if (result.equals("TIMEOUT")) {
@@ -140,3 +139,4 @@ public class Telemedicine {
         }
     }
 }
+
